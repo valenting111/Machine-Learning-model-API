@@ -9,7 +9,7 @@ This project trains an ensemble machine learning model on the Heart failure clin
 * `EnsembleModel.ipynb` : An Jupyter Notebook that performs the analysis and visualization of the dataset, trains an ensemble model on it and evaluates the results.
 * `heart_failure_clinical_records_dataset.csv` : The dataset in question.
 * `api.py` : The main script. It allows to run different actions based on the user's input commands. 
-* `test_data.json` : A JSON file containing a test input sample .
+* `test_data.json` : A JSON file containing a test input sample.
 * `references.txt` : A list of the resources used to achieve this project.
 * `ensemble_classifier.pkl` : The trained model saved in pickle format. It is possible to overwrite it by training a new model through api.py.
 * `requirements.txt` : A list of the required packages to be able to run all the scripts.
@@ -39,7 +39,7 @@ This script can be ran for 2 different purposes:
 * Start a server on your local machine to make predictions with the trained model through an API.
 
 In both cases, open your terminal or anaconda prompt and navigate to the folder where this script is located.
-Then, to choose with part of the script to run, the python file reads in the command line arguments you feed it with.
+Then, to choose which part of the script to run, the python file reads in the command line arguments you feed it with.
 
 
 So to train a model without saving it run: `python api.py train 0`
@@ -74,9 +74,9 @@ We want to combine different models that can capture different aspects of the da
 
 We also want to avoid algorithms which are likely to highly overfit on such a small dataset, like neural networks.
 
-To try to significantly reduce the variance error, we choose 5 different base models and not 3. We don't go for an even number because in the VotingClassifier documentation they mention that in case of a tie between the votes, the algorithm simply choses the class based on the ascending sort order.
+To try to significantly reduce the variance error, we choose 5 different base models and not 3. We don't go for an even number because in the VotingClassifier documentation they mention that in case of a tie between the votes, the algorithm simply choses the class based on the ascending sort order of the classes.
 
-Finally, we do hyperparameter tuning doing a small grid search to try to find the best parameters for each model. We show in the Jupyter Notebook the improvements obtained with these methods.
+Finally, we do hyperparameter tuning doing a small grid search with cross fold validation to try to find the best parameters for each model. We show in the Jupyter Notebook the improvements obtained with these methods.
 
 In the end, the 5 classifiers used are:
 * Support Vector Machines

@@ -38,10 +38,10 @@ This script can be ran for 2 different purposes:
 
 In both cases, open your terminal or anaconda prompt and navigate to the folder where this script is located.
 Then, to choose with part of the script to run, the python file reads in the command line arguments you feed it with.
-So to train a model without saving it run: 'python api.py train 0'
-To do the same but saving the model run: 'python api.py train 1'
+So to train a model without saving it run: `python api.py train 0`
+To do the same but saving the model run: `python api.py train 1`
 
-To start the server on your local machine, run: 'python api.py api'
+To start the server on your local machine, run: `python api.py api`
 
 Once the server is started, you will be able to make predictions on new test data.
 

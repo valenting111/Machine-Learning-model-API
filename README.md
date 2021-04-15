@@ -56,7 +56,11 @@ Once the server is started, you will be able to make predictions on new test dat
 ### Making predictions with curl
 
 The server will be hosted at: http://127.0.0.1:8000
-So to make a POST request to it and ask for a prediction on the test sample in test_data.json, you need to open a new terminal, navigate to the same folder where these files are located, and run: `curl --request POST --data @test_data.json http://127.0.0.1:8000/predict`
+
+
+So to make a POST request to it and ask for a prediction on the test sample in test_data.json, you need to open a new terminal, navigate to the same folder where these files are located, and run: 
+
+`curl --request POST --data @test_data.json http://127.0.0.1:8000/predict`
 
 
 #### Note:

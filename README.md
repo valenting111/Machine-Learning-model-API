@@ -1,7 +1,7 @@
 # Machine-Learning-model-API
 
 
-This project trains a machine learning model on the Heart failure clinical records Data Set available at https://archive.ics.uci.edu/ml/datasets/Heart+failure+clinical+records , and implements an API to use that model in a (local) web server for prediction.
+This project trains an ensemble machine learning model on the Heart failure clinical records Data Set available at https://archive.ics.uci.edu/ml/datasets/Heart+failure+clinical+records , and implements an API to use that model in a (local) web server for prediction.
 
 
 ## What the repository contains:

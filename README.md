@@ -1,4 +1,6 @@
 # Machine-Learning-model-API
+
+
 This project trains a machine learning model on the Heart failure clinical records Data Set available at https://archive.ics.uci.edu/ml/datasets/Heart+failure+clinical+records , and implements an API to use that model in a (local) web server for prediction.
 
 
@@ -39,16 +41,22 @@ This script can be ran for 2 different purposes:
 In both cases, open your terminal or anaconda prompt and navigate to the folder where this script is located.
 Then, to choose with part of the script to run, the python file reads in the command line arguments you feed it with.
 So to train a model without saving it run: `python api.py train 0`
+
+
 To do the same but saving the model run: `python api.py train 1`
 
+
 To start the server on your local machine, run: `python api.py api`
+
 
 Once the server is started, you will be able to make predictions on new test data.
 
 ##### Making predictions with curl
 
 The server will be hosted at: http://127.0.0.1:8000
-So to make a POST request to it and ask for a prediction on the test sample in test_data.json, you need to open a new terminal, navigate to the same folder where these files are located, and run: 'curl --request POST --data @test_data.json http://127.0.0.1:8000/predict'
+So to make a POST request to it and ask for a prediction on the test sample in test_data.json, you need to open a new terminal, navigate to the same folder where these files are located, and run: `curl --request POST --data @test_data.json http://127.0.0.1:8000/predict`
+
+
 #### Note:
 * While the server URL is fixed, the JSON file can be renamed.
 * As explained in the Jupyter Notebook, the 'diabetes' and 'sex' features are not used, hence they should not be present in the JSON file.

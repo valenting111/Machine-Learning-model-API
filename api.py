@@ -6,6 +6,7 @@ import pickle
 import pandas as pd
 
 
+################ Creating the API ###############
 
 
 class PredictRequest(BaseModel):
@@ -57,7 +58,7 @@ async def get_model_predictions(request: PredictRequest) -> ModelResponse:
         return model_response
     
     
-    return ModelResponse(predictions= [{"Prediction": prediction}])
+    return ModelResponse(predictions= [{"Prediction for death event": prediction}])
         
 
 ################ Training the model ###############
@@ -75,7 +76,6 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import GridSearchCV
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.naive_bayes import GaussianNB
-import pickle
 
 
 
@@ -152,8 +152,7 @@ if __name__ == '__main__':
     elif sys.argv[1] == "api":
         uvicorn.run(app, host='127.0.0.1', port=8000)
     else:
-        for i, arg in enumerate(sys.argv):
-            print(f"Argument {i:>6}: {arg}")
+        print("Command not recognized")
             
         
         

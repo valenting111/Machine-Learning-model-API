@@ -17,7 +17,7 @@ This project trains a machine learning model on the Heart failure clinical recor
 
 
 For this project, I created a new virtual environment using Anaconda, the Spyder IDE and Python 3.8.5.
-The list of the packages required (listed in "requirements.txt") are:
+The list of the packages required (the full list is in "requirements.txt") are:
 * pandas
 * numpy
 * fastapi

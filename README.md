@@ -17,7 +17,7 @@ This project trains a machine learning model on the Heart failure clinical recor
 
 
 For this project, I created a new virtual environment using Anaconda, the Spyder IDE and Python 3.8.5.
-The list of the packages required (liste in "requirements.txt") are:
+The list of the packages required (listed in "requirements.txt") are:
 * pandas
 * numpy
 * fastapi
@@ -36,7 +36,7 @@ The Jupyter Notebook is simply used to explain visually and analytically the mot
 
 This script can be ran for 2 different purposes:
 * Train an ensemble model on the dataset mentioned above and optionally save it.
-* Start a server on your local machine to use the trained model through an API.
+* Start a server on your local machine to make predictions with the trained model through an API.
 
 In both cases, open your terminal or anaconda prompt and navigate to the folder where this script is located.
 Then, to choose with part of the script to run, the python file reads in the command line arguments you feed it with.

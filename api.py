@@ -74,9 +74,8 @@ from sklearn.svm import SVC
 from sklearn.linear_model import LogisticRegression
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import GridSearchCV
-from sklearn.ensemble import RandomForestClassifier
 from sklearn.naive_bayes import GaussianNB
-
+from sklearn.tree import DecisionTreeClassifier
 
 
 def train_model(save_model=False):
@@ -116,19 +115,20 @@ def train_model(save_model=False):
     
     #training the ensemble model
     ensemble_classifier = VotingClassifier(estimators=[ 
-        ('SVC', SVC()),
-        ('LogisticR', LogisticRegression()),
-        ('RandomF', RandomForestClassifier())
-        ], voting='hard')
-    
-    params = {'SVC__C': [0.1, 1., 10.],
+    ('SVC', SVC()),
+    ('LogisticR', LogisticRegression()),
+    ('DecisionT', DecisionTreeClassifier()),
+    ('NN', KNeighborsClassifier()),
+    ('NB', GaussianNB())
+    ], voting='hard')
+
+    params = {'SVC__C': [0.1, 1, 10],
               'SVC__kernel': ['linear', 'rbf'],
-          'LogisticR__C': [0.1, 1., 10.],
-             'RandomF__n_estimators': [20, 50, 100],
-             'RandomF__max_features' : [2,4,6,8]}
+          'LogisticR__C': [0.1, 1, 10],
+             'LogisticR__solver': ['liblinear', 'lbfgs'],
+             'NN__n_neighbors': [2, 5, 10, 20]}
     
     ensemble_gridsearch = GridSearchCV(estimator=ensemble_classifier, param_grid=params, cv=5)
-    
     pipe = Pipeline([('transformer', transformer), ('ensemble_gridsearch', ensemble_gridsearch)])
     pipe.fit(X_train, y_train)
     

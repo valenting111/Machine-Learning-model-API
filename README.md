@@ -65,6 +65,23 @@ So to make a POST request to it and ask for a prediction on the test sample in t
 
 
 
+## Choosing the ML model:
+We want to combine different models that can capture different aspects of the data, so we avoid using models based on very similar methods (like a decision tree and a random forest). 
+
+We also want to avoid algorithms which are likely to highly overfit on such a small dataset, like neural networks.
+
+To try to significantly reduce the variance error, we choose 5 different base models and not 3. We don't go for an even number because in the VotingClassifier documentation they mention that in case of a tie between the votes, the algorithm simply choses the class based on the ascending sort order.
+
+Finally, we do hyperparameter tuning doing a small grid search to try to find the best parameters for each model. We show in the Jupyter Notebook the improvements obtained with these methods.
+
+In the end, the 5 classifiers used are:
+* Support Vector Machines
+* Nearest Neighbor
+* Logistic Regression
+* Decision Tree
+* Naive Bayes
+
+
 
 
 

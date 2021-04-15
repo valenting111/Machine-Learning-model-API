@@ -132,6 +132,7 @@ def train_model(save_model=False):
     pipe = Pipeline([('transformer', transformer), ('ensemble_gridsearch', ensemble_gridsearch)])
     pipe.fit(X_train, y_train)
     
+    #If we chose to save the model
     if save_model:
         pickle_out = open("ensemble_classifier.pkl", "wb")
         pickle.dump(pipe, pickle_out)
@@ -144,15 +145,15 @@ def train_model(save_model=False):
 import sys    
 
 if __name__ == '__main__':
-    for i, arg in enumerate(sys.argv):
-            print(f"Argument {i:>6}: {arg}")
     if sys.argv[1] == "train":
         if sys.argv[2] == "1":
             train_model(True)
+        else:
+            train_model()
     elif sys.argv[1] == "api":
         uvicorn.run(app, host='127.0.0.1', port=8000)
     else:
-        print("Command not recognized")
+        print("User command not recognized")
             
         
         

@@ -6,13 +6,13 @@ This project trains a machine learning model on the Heart failure clinical recor
 
 #### What the repository contains:
 
-* EnsembleModel.ipynb : An Jupyter Notebook that performs the analysis and visualization of the dataset, trains an ensemble model on it and evaluate the results.
-* heart_failure_clinical_records_dataset.csv : The dataset in question.
-* api.py : The main script. It allows to run different actions based on the user's input commands. 
-* test_data.json : A JSON file containing a test input sample .
-* references.txt : A list of the resources used to achieve this project.
-* ensemble_classifier.pkl : The trained model in pickle format. It is possible to overwrite it by training a new model through api.py.
-* requirements.txt : A list of the required packages to be able to run all the scripts.
+* `EnsembleModel.ipynb` : An Jupyter Notebook that performs the analysis and visualization of the dataset, trains an ensemble model on it and evaluate the results.
+* `heart_failure_clinical_records_dataset.csv` : The dataset in question.
+* `api.py` : The main script. It allows to run different actions based on the user's input commands. 
+* `test_data.json` : A JSON file containing a test input sample .
+* `references.txt` : A list of the resources used to achieve this project.
+* `ensemble_classifier.pkl` : The trained model saved in pickle format. It is possible to overwrite it by training a new model through api.py.
+* `requirements.txt` : A list of the required packages to be able to run all the scripts.
 
 
 
@@ -40,6 +40,8 @@ This script can be ran for 2 different purposes:
 
 In both cases, open your terminal or anaconda prompt and navigate to the folder where this script is located.
 Then, to choose with part of the script to run, the python file reads in the command line arguments you feed it with.
+
+
 So to train a model without saving it run: `python api.py train 0`
 
 

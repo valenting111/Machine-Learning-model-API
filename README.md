@@ -6,7 +6,7 @@ This project trains a machine learning model on the Heart failure clinical recor
 
 ## What the repository contains:
 
-* `EnsembleModel.ipynb` : An Jupyter Notebook that performs the analysis and visualization of the dataset, trains an ensemble model on it and evaluate the results.
+* `EnsembleModel.ipynb` : An Jupyter Notebook that performs the analysis and visualization of the dataset, trains an ensemble model on it and evaluates the results.
 * `heart_failure_clinical_records_dataset.csv` : The dataset in question.
 * `api.py` : The main script. It allows to run different actions based on the user's input commands. 
 * `test_data.json` : A JSON file containing a test input sample .

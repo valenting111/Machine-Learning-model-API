@@ -4,7 +4,7 @@
 This project trains a machine learning model on the Heart failure clinical records Data Set available at https://archive.ics.uci.edu/ml/datasets/Heart+failure+clinical+records , and implements an API to use that model in a (local) web server for prediction.
 
 
-#### What the repository contains:
+## What the repository contains:
 
 * `EnsembleModel.ipynb` : An Jupyter Notebook that performs the analysis and visualization of the dataset, trains an ensemble model on it and evaluate the results.
 * `heart_failure_clinical_records_dataset.csv` : The dataset in question.
@@ -32,7 +32,7 @@ The list of the packages required (liste in "requirements.txt") are:
 The Jupyter Notebook is simply used to explain visually and analytically the motivations behind certain choices, like preprocessing or removing some input features. But everything can be executed through the "api.py" file.
 
 
-#### How to use api.py
+## How to use api.py
 
 This script can be ran for 2 different purposes:
 * Train an ensemble model on the dataset mentioned above and optionally save it.
@@ -53,7 +53,7 @@ To start the server on your local machine, run: `python api.py api`
 
 Once the server is started, you will be able to make predictions on new test data.
 
-##### Making predictions with curl
+### Making predictions with curl
 
 The server will be hosted at: http://127.0.0.1:8000
 So to make a POST request to it and ask for a prediction on the test sample in test_data.json, you need to open a new terminal, navigate to the same folder where these files are located, and run: `curl --request POST --data @test_data.json http://127.0.0.1:8000/predict`

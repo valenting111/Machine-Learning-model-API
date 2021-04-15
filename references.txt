@@ -1,0 +1,5 @@
+https://dev.to/gabogomezt/your-first-machine-learning-rest-api-with-python-fastapi-18jm
+https://fastapi.tiangolo.com/tutorial/body/
+https://www.youtube.com/watch?v=b5F667g1yCk&t=901s&ab_channel=KrishNaik
+https://scikit-learn.org/stable/auto_examples/compose/plot_column_transformer_mixed_types.html
+https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.htmls
